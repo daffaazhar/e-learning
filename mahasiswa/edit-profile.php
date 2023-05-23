@@ -162,6 +162,15 @@ $student = mysqli_fetch_assoc($queryStudent);
         </div>
       </form>
     </div>
+    <div class="bg-white rounded-lg shadow-[0_0_0_1px_rgba(0,0,0,0.05)] p-4 mt-8">
+      <div class="grid grid-cols-2 p-4">
+        <div>
+          <h2 class="text-lg text-[#444] font-semibold mb-1">Hapus Permanen Akun</h2>
+          <p class="mb-4">Akun yang telah dihapus tidak dapat dikembalikan.</p>
+          <a href="./controller/delete_account.php?nrp=<?= $student["nrp"] ?>" class="px-6 inline-block bg-red-600 text-white px-4 py-2 rounded">Hapus Akun</a>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   <script src="../js/main.js"></script>

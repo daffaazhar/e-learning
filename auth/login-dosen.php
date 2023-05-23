@@ -74,7 +74,9 @@ if (isset($_SESSION["login_dosen"])) {
   <div class="flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500">
     <div class="flex justify-center items-center h-screen">
       <form action="" method="POST" class="bg-white w-96 px-8 pt-8 pb-6 rounded-xl shadow-[0_10px_25px_rgba(92,99,105,0.2)]">
-        <img src="../img/logo-himit.png" alt="Logo HIMIT" class="w-20">
+        <a href="../index.php">
+          <img src="../img/logo-himit.png" alt="Logo HIMIT" class="w-20">
+        </a>
         <h1 class="mt-2 text-3xl font-bold text-[#34364a] leading-relaxed">Login Dosen.</h1>
         <p class="text-base text-[#868686] mb-4">Yuk isi data berikut untuk masuk!</p>
         <?php if (isset($_SESSION["error_message"])) : ?>

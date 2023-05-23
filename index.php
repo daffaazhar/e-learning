@@ -24,7 +24,24 @@ elseif (isset($_SESSION["login_mhs"]))
   <title>E-Learning HIMIT</title>
 </head>
 
-<body class="bg-white">
+<body class="bg-white overflow-x-hidden">
+  <?php if (isset($_SESSION["logout_message"]) || isset($_SESSION["message"])) : ?>
+    <div class="toast table z-50">
+      <div class="toast-content">
+        <i class="bx bx-check check"></i>
+        <div class="message">
+          <span class="text text-1">
+            Logout Berhasil
+          </span>
+          <span class="text text-2 text-black">
+            <?= isset($_SESSION["logout_message"]) ? $_SESSION["logout_message"] : $_SESSION["message"] ?>
+          </span>
+        </div>
+        <i class="bx bx-x close"></i>
+        <div class="progress"></div>
+      </div>
+    </div>
+  <?php endif ?>
   <header class="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out">
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
       <div class="flex items-center justify-between h-16 md:h-20">
@@ -92,6 +109,15 @@ elseif (isset($_SESSION["login_mhs"]))
       </div>
     </label>
   </label>
+
+  <script src="./js/main.js"></script>
+  <?php if (isset($_SESSION["logout_message"]) || isset($_SESSION["message"])) : ?>
+    <script>
+      showToast();
+    </script>
+  <?php endif ?>
+  <?php unset($_SESSION["logout_message"]) ?>
+  <?php unset($_SESSION["message"]) ?>
 </body>
 
 </html>

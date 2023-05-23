@@ -92,7 +92,9 @@ $avgGrade = query("SELECT TRUNCATE(AVG(g.grade_value), 2) AS average_grade FROM 
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         <!-- Card -->
         <div class="flex items-center p-4 bg-white rounded-lg shadow-[0_0_0_1px_rgba(0,0,0,0.05)]">
-          <img src="../img/<?= $student["image"] ?>" alt="" class="w-12 h-12 rounded-full object-cover mr-4">
+          <a href="./controller/download.php?file=<?= $student["image"] ?>">
+            <img src="../img/<?= $student["image"] ?>" alt="" class="w-12 h-12 rounded-full object-cover mr-4">
+          </a>
           <div>
             <p class="text-sm font-medium text-gray-600">
               Selamat datang,
@@ -142,7 +144,11 @@ $avgGrade = query("SELECT TRUNCATE(AVG(g.grade_value), 2) AS average_grade FROM 
               Rata-Rata Nilai
             </p>
             <p class="text-lg font-semibold text-gray-700">
-              <?= $avgGrade ?>
+              <?php if ($avgGrade == "") : ?>
+                0
+              <?php else : ?>
+                <?= $avgGrade ?>
+              <?php endif ?>
             </p>
           </div>
         </div>

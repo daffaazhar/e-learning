@@ -60,6 +60,20 @@ $lecturer = mysqli_fetch_assoc($queryLecturer);
           </a>
         </li>
         <li class="group relative px-6 py-3">
+          <span class="absolute inset-y-0 translate-x-[-28px] w-1 bg-[#2363DE] rounded-tr-lg rounded-br-lg group-hover:translate-x-[-24px] transition-transform"></span>
+          <a href="./daftar-kelas.php" class="flex items-center text-gray-900 rounded-lg">
+            <i class="text-2xl text-[#707275] bx bx-book group-hover:text-black transition duration-200"></i>
+            <span class="text-base text-[#707275] font-semibold ml-4 group-hover:text-black transition duration-200">Daftar Kelas</span>
+          </a>
+        </li>
+        <li class="group relative px-6 py-3">
+          <span class="absolute inset-y-0 translate-x-[-28px] w-1 bg-[#2363DE] rounded-tr-lg rounded-br-lg group-hover:translate-x-[-24px] transition-transform"></span>
+          <a href="./daftar-mahasiswa.php" class="flex items-center text-gray-900 rounded-lg">
+            <i class="text-2xl text-[#707275] bx bx-user group-hover:text-black transition duration-200"></i>
+            <span class="text-base text-[#707275] font-semibold ml-4 group-hover:text-black transition duration-200">Daftar Mahasiswa</span>
+          </a>
+        </li>
+        <li class="group relative px-6 py-3">
           <span class="absolute inset-y-0 left-0 w-1 bg-[#2363DE] rounded-tr-lg rounded-br-lg"></span>
           <a href="#" class="flex items-center text-gray-900 rounded-lg">
             <i class="text-2xl bx bx-cog"></i>
@@ -77,7 +91,7 @@ $lecturer = mysqli_fetch_assoc($queryLecturer);
     </div>
   </aside>
 
-  <div class="bg-[#f9fafb] p-6 sm:ml-64 h-screen">
+  <div class="bg-[#f9fafb] p-6 sm:ml-64 h-screen mb-8">
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-semibold">Edit Profil</h1>
       <div class="flex items-center gap-x-4">
@@ -163,6 +177,15 @@ $lecturer = mysqli_fetch_assoc($queryLecturer);
           <button type="submit" name="edit" id="submit-button" class="px-6 mt-2 inline-block bg-[#2363DE] text-white px-4 py-2 rounded">Simpan Perubahan</button>
         </div>
       </form>
+    </div>
+    <div class="bg-white rounded-lg shadow-[0_0_0_1px_rgba(0,0,0,0.05)] p-4 mt-8">
+      <div class="grid grid-cols-2 p-4">
+        <div>
+          <h2 class="text-lg text-[#444] font-semibold mb-1">Hapus Permanen Akun</h2>
+          <p class="mb-4">Akun yang telah dihapus tidak dapat dikembalikan.</p>
+          <a href="./controller/delete_account.php?nip=<?= $lecturer["nip"] ?>" class="px-6 inline-block bg-red-600 text-white px-4 py-2 rounded">Hapus Akun</a>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>

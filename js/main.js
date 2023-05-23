@@ -18,7 +18,8 @@ function showToast() {
     currentLocation == "http://localhost/e-learning/auth/login-mahasiswa.php" ||
     currentLocation == "http://localhost/e-learning/dosen/daftar-mahasiswa.php" ||
     currentLocation == "http://localhost/e-learning/mahasiswa/edit-profile.php" ||
-    currentLocation == "http://localhost/e-learning/dosen/edit-profile.php"
+    currentLocation == "http://localhost/e-learning/dosen/edit-profile.php" ||
+    currentLocation == "http://localhost/e-learning/index.php"
       ? ".toast"
       : ".toast-warning";
   const progressClass =
@@ -27,7 +28,8 @@ function showToast() {
     currentLocation == "http://localhost/e-learning/auth/login-mahasiswa.php" ||
     currentLocation == "http://localhost/e-learning/dosen/daftar-mahasiswa.php" ||
     currentLocation == "http://localhost/e-learning/mahasiswa/edit-profile.php" ||
-    currentLocation == "http://localhost/e-learning/dosen/edit-profile.php"
+    currentLocation == "http://localhost/e-learning/dosen/edit-profile.php" ||
+    currentLocation == "http://localhost/e-learning/index.php"
       ? ".progress"
       : ".progress-warning";
 

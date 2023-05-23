@@ -210,3 +210,21 @@ function deleteCourse($course_id)
 
   return array("status" => mysqli_affected_rows($conn), "result" => "Kelas berhasil dihapus");
 }
+
+function deleteAccountLecturer($nip)
+{
+  global $conn;
+
+  mysqli_query($conn, "DELETE FROM lecturer WHERE nip = '$nip'");
+
+  return array("status" => mysqli_affected_rows($conn), "result" => "Akun berhasil dihapus");
+}
+
+function deleteAccountStudent($nrp)
+{
+  global $conn;
+
+  mysqli_query($conn, "DELETE FROM student WHERE nrp = '$nrp'");
+
+  return array("status" => mysqli_affected_rows($conn), "result" => "Akun berhasil dihapus");
+}
